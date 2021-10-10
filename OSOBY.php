@@ -34,15 +34,15 @@
                 if ($key != 'buttonAvg'){
                     echo "$key: $value <br>";
                     $ageAvg=$ageAvg+$value; 
-                    
-                    //$wynik = $ageAvg/$value;                       
+                     
+                                     
                 }           
             }
+            
+            
             echo "Średni wiek: ";
             echo number_format($ageAvg, 2). "<br> <br> <br>" ; //zaokrąglenie do 2 liczb po przecinku 
-            echo <<<back
-            <input type="submit" value="Wróć" onClick="location='OSOBY.php'"/> 
-            back; // powrót na początek
+            echo "<a href=\"OSOBY.php\">powrót</a>";
         }
     ?>
 </body>
