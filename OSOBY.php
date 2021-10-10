@@ -20,7 +20,7 @@
                 <form method="POST">          
             wiek;
                 for ($i=1; $i <= $_POST['person']; $i++) {
-                echo "<input type=\"number\" name=\"age$i\" placeholder=\"Podaj wiek osoby\" > <br>";
+                echo "<input type=\"number\" name=\"age$i\" placeholder=\"Podaj wiek osoby\" > <br> <br>";
                 }
                 echo '<input type="submit" name="buttonAvg" value="oblicz wiek">';
             echo <<<wiek
@@ -33,9 +33,12 @@
             foreach ($_POST as $key => $value) {       
                 if ($key != 'buttonAvg'){
                     echo "$key: $value <br>";
-                    $ageAvg=$ageAvg+$value;                       
+                    $ageAvg=$ageAvg+$value; 
+                    
+                    //$wynik = $ageAvg/$value;                       
                 }           
             }
+            echo "Średni wiek: ";
             echo number_format($ageAvg, 2). "<br> <br> <br>" ; //zaokrąglenie do 2 liczb po przecinku 
             echo <<<back
             <input type="submit" value="Wróć" onClick="location='OSOBY.php'"/> 
