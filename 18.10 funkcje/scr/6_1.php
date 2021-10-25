@@ -1,12 +1,20 @@
 <?php
-if (!empty($_POST['name'])) {
     require_once '../fun/funkcja.php';
-    //echo text();
-    echo name('Krystyna');
-    echo "<br>";
-    echo 'Imię: '.name($_POST['name']). '<hr>';
-    echo validateString($_POST['name'], 10);
+    //show();
+    echo "<hr>";
+    if (!empty($_POST['name']) && !empty($_POST['color'])) {
+        echo $_POST['color']."<br>"; 
+        echo "Imię: ".$_POST['name'].", długość: ".strlen($_POST['name']).", narodowość: ".$_POST['nationality']."<br>";
+        $color=$_POST['color'];
+        $nationality=$_POST['nationality'];
+        echo "<div style =\" color: $color \">";
+        echo "Imię poprawne: ".valideName($_POST['name'], 10 , $_POST['color']).
+        ", długość: ".strlen(valideName($_POST['name'], 10 , $_POST['color']))."</div>";
 
-    //echo $_POST['name'];
-}
+        echo "narodowość: ".($_POST['nationality']);
+       
+
+        
+    }
+
 ?>

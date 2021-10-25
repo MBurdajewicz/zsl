@@ -8,9 +8,12 @@
     {
     return "$name";
     }
+    function nationality($nationality)
+    {
+    return "$nationality";
+    }
     // 1 DUŻA Reszta małła usunąć białe znaki
-    function validateString($string, $lenght) {
-        
-        return substr(ucfirst(strtolower(trim($string))), 0, $lenght);
+    function valideName($name, $strlen, $color, $nationality) {
+        return substr(ucfirst(strtolower(trim($name))), 0, $strlen);
     }
 ?>
