@@ -1,0 +1,11 @@
+table,td,th{
+    border: solid 8px powderblue;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    font-size: large;
+    
+}
+body{
+    background-color: rgb(90, 161, 161);
+}
